@@ -3,6 +3,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using WindowsFormsApplication8;
+using WindowsFormsApplication9;
+using CarReservationSystem.Code;
 
 namespace CarReservationSystem
 {
@@ -16,7 +19,9 @@ namespace CarReservationSystem
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Form1());
+            Application.Run(new Login());
         }
+
+        public static FormData FormData { get; set; }
     }
 }

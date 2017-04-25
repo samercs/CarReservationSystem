@@ -1,4 +1,6 @@
-﻿namespace WindowsFormsApplication9
+﻿using System.ComponentModel;
+
+namespace WindowsFormsApplication9
 {
     partial class Login
     {
@@ -69,6 +71,7 @@
             // 
             this.textBox2.Location = new System.Drawing.Point(230, 126);
             this.textBox2.Name = "textBox2";
+            this.textBox2.PasswordChar = '*';
             this.textBox2.Size = new System.Drawing.Size(151, 26);
             this.textBox2.TabIndex = 3;
             // 
@@ -82,6 +85,7 @@
             this.button1.TabIndex = 4;
             this.button1.Text = "Login";
             this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // button2
             // 
@@ -93,6 +97,7 @@
             this.button2.TabIndex = 5;
             this.button2.Text = "Sign Up";
             this.button2.UseVisualStyleBackColor = false;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // Login
             // 
@@ -113,6 +118,7 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Main Screen";
             this.TransparencyKey = System.Drawing.SystemColors.ActiveBorder;
+            this.Closing += new System.ComponentModel.CancelEventHandler(this.Form_Closing);
             this.Load += new System.EventHandler(this.Form1_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
