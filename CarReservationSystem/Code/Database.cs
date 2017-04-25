@@ -180,7 +180,7 @@ namespace CarReservationSystem.Code
                     objConnection.Open();
                 }
                 objCommand.ExecuteNonQuery();
-                objCommand.CommandText = "select @@identity";
+                objCommand.CommandText = "select @@LAST_INSERT_ID";
                 return long.Parse(objCommand.ExecuteScalar().ToString());
 
             }

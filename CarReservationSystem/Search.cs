@@ -6,6 +6,8 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Windows.Forms;
+using WindowsFormsApplication1;
+using CarReservationSystem;
 using CarReservationSystem.Code;
 
 namespace WindowsFormsApplication5
@@ -51,7 +53,18 @@ namespace WindowsFormsApplication5
 
         private void button2_Click(object sender, EventArgs e)
         {
-            MessageBox.Show(listView1.SelectedItems[0].ImageKey);
+            if (listView1.SelectedItems.Count > 0)
+            {
+                Program.FormData.BookCarId = int.Parse(listView1.SelectedItems[0].ImageKey);
+                var hire = new Hire();
+                hire.Show();
+                this.Hide();
+            }
+            else
+            {
+                MessageBox.Show("Please select car to book.", "", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+
         }
     }
 }

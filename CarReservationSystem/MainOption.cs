@@ -6,6 +6,7 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Windows.Forms;
+using WindowsFormsApplication3;
 using WindowsFormsApplication4;
 using WindowsFormsApplication5;
 
@@ -41,6 +42,13 @@ namespace WindowsFormsApplication6
             {
                 var returnFrm = new ReturnForm();
                 returnFrm.Show();
+                this.Hide();
+            }
+
+            if (radioButton3.Checked)
+            {
+                var replace = new Replace();
+                replace.Show();
                 this.Hide();
             }
         }
